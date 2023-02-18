@@ -1,11 +1,15 @@
-function Overview (props){
-    const [taskList, setTaskList] = useState([]);
+import React from "react";
 
-    return(
-        <div>
-            
-        </div>
-    )
-}
+const Overview = (props) => {
+    const { tasks } = props;
 
-export default Overview
+    return (
+        <ul>
+            {tasks.map((task) => {
+                return <li>{task.text}</li>;
+            })}
+        </ul>
+    );
+};
+
+export default Overview;
