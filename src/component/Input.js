@@ -9,9 +9,10 @@ class Input extends React.Component {
         this.state = {
             task: { 
                 text: '',
-                id: uniqid()
+                id: uniqid(),
+                number: 0,
             },
-        tasks: [],
+            tasks: [],
         };
     }
 
@@ -21,6 +22,7 @@ class Input extends React.Component {
             task: {
                 text: e.target.value,
                 id: this.state.task.id,
+                number: this.state.tasks.length
             },
         });
     };
@@ -35,6 +37,7 @@ class Input extends React.Component {
                 id: uniqid(),
             },
         });
+        console.log(this.state.tasks)
     };
 
     render(){
